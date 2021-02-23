@@ -11,10 +11,10 @@ module.exports = MovingObject;
 MovingObject.prototype.draw = function (ctx) {
     ctx.lineWidth = 2;
     ctx.strokeStyle = 'blue';
-
+    // debugger
     ctx.beginPath();
     ctx.arc(this.pos[0], this.pos[1], this.radius, 0, 2*Math.PI);
-    ctx.fillStyle = 'purple';
+    ctx.fillStyle = this.color;
     ctx.fill();
     ctx.stroke();
     ctx.closePath();

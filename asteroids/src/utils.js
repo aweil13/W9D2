@@ -1,3 +1,6 @@
+const DIM_X = 800;
+const DIM_Y = 900;
+
 const Util = {
     inherits(childClass, parentClass){
         function Surrogate(){};
@@ -13,6 +16,13 @@ const Util = {
       // Scale the length of a vector by the given amount.
     scale(vec, m) {
         return [vec[0] * m, vec[1] * m];
+      },
+
+      randomPosition(){
+        const x = Math.floor(Math.random() * (DIM_X - 25));
+        const y = Math.floor(Math.random() * (DIM_Y - 25));
+        const pos = [x, y];
+        return pos;
       }
 }
 

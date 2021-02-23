@@ -8,7 +8,7 @@ const COLOR = 'yellow';
 
 function Asteroid(options){
     options = options || {};
-    options.pos = options.pos || "later"; // fix this
+    options.pos = options.pos || Util.randomPosition(); // fix this
     options.vel = options.vel || Util.randomVec(5);
     options.radius = RADIUS;
     options.color = COLOR;

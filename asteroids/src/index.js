@@ -1,7 +1,8 @@
 // console.log("Webpack is working!")
 const Game  = require('./game');
 window.Game = Game;
-
+const GameView = require('./game_view');
+window.GameView = GameView;
 // const MovingObject = require('./moving_object');
 // window.MovingObject = MovingObject;
 // const Asteroid = require('./asteroid');
@@ -16,8 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const ctx = canvasEl.getContext('2d');
     
-    ctx.fillStyle = 'grey';
-    ctx.fillRect(0, 0, 800, 900);
     // const mo = new MovingObject({
     //     pos: [30, 30],
     //     vel: [10, 10],
@@ -30,5 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const game = new Game();
     game.addAsteroids();
     game.draw(ctx);
-    
+    const gameView = new GameView(game, ctx);
+    gameView.start();
 })
