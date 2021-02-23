@@ -18,6 +18,10 @@ MovingObject.prototype.draw = function (ctx) {
     ctx.fill();
     ctx.stroke();
     ctx.closePath();
+}
 
-
+MovingObject.prototype.move = function (){
+    this.pos[0] = this.pos[0] + this.vel[0];
+    this.pos[1] = this.pos[1] + this.vel[1];
+    
 }

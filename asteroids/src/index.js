@@ -7,13 +7,13 @@ console.log(MovingObject);
 
 document.addEventListener('DOMContentLoaded', () => {
     const canvasEl = document.getElementById('game-canvas');
-    canvasEl.width = 600;
+    canvasEl.width = 800;
     canvasEl.height = 900;
 
     const ctx = canvasEl.getContext('2d');
     
     ctx.fillStyle = 'grey';
-    ctx.fillRect(0, 0, 600, 900);
+    ctx.fillRect(0, 0, 800, 900);
     // const mo = new MovingObject({
     //     pos: [30, 30],
     //     vel: [10, 10],
