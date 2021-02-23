@@ -20,5 +20,5 @@ Util.inherits(Asteroid, MovingObject);
 
 
 
-const as = new Asteroid({ pos: [30, 30] })
-console.log(as)
+// const as = new Asteroid({ pos: [30, 30] })
+// console.log(as)

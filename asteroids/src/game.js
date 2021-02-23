@@ -12,7 +12,8 @@ function Game(){
 
 Game.prototype.addAsteroids = function () {
     for (let i = this.asteroids.length; i < NUM_ASTEROIDS; i++) {
-        this.asteroids.push(this.randomPosition());
+        let as = new Asteroid(this.randomPosition());
+        this.asteroids.push(as);
     }
 }
 
@@ -24,17 +25,22 @@ Game.prototype.randomPosition = function () {
 }
 
 Game.prototype.draw = function (ctx) {
-    ctx.clearRect();
-    this.asteroids.forEach(asteroid => {
-        let as = new Asteroid(asteroid);
+    ctx.clearRect(0,0,800,900);
+    this.asteroids.forEach(asteroid=> {
+        // let as = new Asteroid(asteroid_pos);
         asteroid.draw(ctx);
     });
 }
 
 Game.prototype.moveObjects = function () {
-    this.asteroids.forEach(asteroid => {
-       asteroid.move();
+    this.asteroids.forEach(asteroid_pos => {
+        // let as = new Asteroid(asteroid_pos);
+        asteroid.move();
     });
 }
 
 module.exports = Game;
+
+// const game = new Game();
+// game.addAsteroids();
+// game.draw();
