@@ -2,6 +2,8 @@
 
 const MovingObject = require('./moving_object');
 window.MovingObject = MovingObject;
+const Asteroid = require('./asteroid');
+window.Asteroid = Asteroid;
 
 console.log(MovingObject);
 
@@ -23,4 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // mo.draw(ctx);
 
+    const as = new Asteroid({ pos: [30, 30] });
+    as.draw(ctx);
 })
