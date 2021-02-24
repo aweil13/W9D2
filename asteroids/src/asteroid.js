@@ -11,7 +11,9 @@ function Asteroid(options){
     options.pos = options.pos || Util.randomPosition(); // fix this
     options.vel = options.vel || Util.randomVec(5);
     options.radius = RADIUS;
-    options.color = COLOR;
+    options.color = COLOR
+    options.game = options.game;
+    
     
     MovingObject.call(this, options);
 }
