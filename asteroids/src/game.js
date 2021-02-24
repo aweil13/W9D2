@@ -1,7 +1,6 @@
 const Asteroid = require("./asteroid");
 const MovingObject = require("./moving_object");
 
- 
 const DIM_X = 800;
 const DIM_Y = 900;
 const NUM_ASTEROIDS = 30;
